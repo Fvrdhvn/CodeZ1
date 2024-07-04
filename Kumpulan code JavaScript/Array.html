@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>SOGKL</title>
+</head>
+<body>
+    <div id="datanya">
+
+    </div>
+    
+    <script>
+
+        var makanan = ["bakso", "nasgor", "pizza"] // decare data array
+        makanan[0] = "Ketoprak" // cara ngubah indexnya
+        console.log(makanan[0]);
+
+        var minuman = ["teh", "kopi", "air", "susu"]
+        var minumanPertama = minuman[0];// ngubah data array
+        var minumanTerakhir = minuman[minuman.length - 1] // nentuin panjang data array terakhir
+        var PanjangMinuman = minuman.length; // mengetahui panjang data
+        console.log(PanjangMinuman);
+
+       var minumanku = minuman.shift(1) // nyopot data dari "minuman" lalu dipindahin ke var baru "minumanku"
+       var minumnenak = minuman.push("jus") // memasukkan "jus" dari Array minuman dan mengembalikan dari Array
+       console.log(minumanku)
+       console.log(minumnenak)
+        
+
+        document.getElementById("datanya").innerHTML = makanan[2]
+        document.getElementById("datanya").innerHTML = "Saya lagi mau makan " + makanan[2] + ",minumnya pake " + minuman[0] // masukkin data ke HTML
+
+        //Menggabungkan dua Array
+
+        var motorhonda = ["vario", "beat", "cbr"]
+        var motoryamaha = ["supra", "repsol", "fazio"]
+        
+        var motorbagus = motorhonda.concat(motoryamaha)
+        console.log(motorbagus)
+
+        //Menggabungkan tiga array
+    
+        var motorhonda = ["vario", "beat", "cbr"]
+        var motoryamaha = ["supra", "repsol", "fazio"]
+        var motorlistrik = ["viar", "wuling", "volta"]
+
+        var motordi2023 = motorhonda.concat(motoryamaha,motorlistrik)
+        console.log(motordi2023)
+        var datamotor = motordi2023.length
+        console.log(datamotor)
+
+        /*Iterasi pada Array ,
+        A.Iterasi Data dan Array dengan for*/
+
+        var mobil = ["BMW", "Datsun", "Nissan"]
+        var teks, i;
+        teks = "<ul>";
+        for (i = 0; i < mobil.length; i++)
+         {
+            teks += "<li>" + mobil[i] + "</li>";
+
+        }
+
+        teks += "</ul>";
+        document.getElementById("datanya").innerHTML = teks; 
+
+        // B.dengan ForEach
+
+        var Handphone = ["xiaomi", "iphone", "samsung"]
+        var teks2,i;
+        teks2 = "<ul>"
+        Handphone.forEach(fungsiMobil);
+        teks2 += "<ul>"
+
+        function fungsiMobil(value) {
+            teks2 += "<li>" + value + "</li>"
+        }
+
+       
+        document.getElementById("datanya").innerHTML = teks2;
+
+        //C.denagn .map
+
+        var nomor1 = [35, 5, 6, 12, 4];
+        var nomor2 = nomor1.map(kalikanDenganDua);
+
+        function kalikanDenganDua(value, index, array) {
+            return value * 2;
+        }
+
+        console.log(nomor2)
+
+        // untuk menghapus elemen terakhir:
+        let fruits = ['apple', 'banana', 'orange'];
+        let lastFruit = fruits.pop(); // jadi .pop() berguna untuk mengeliminasi elemen terakhir
+
+        console.log(fruits);   // Output: ['apple', 'banana']
+        console.log(lastFruit);   // Output: 'orange'
+
+
+
+    
+        /*bro jangan lupa kalo js dah kelar 
+        nanti semua 
+        materinya disimpen aje di workspace*/
+        
+    
+        
+
+    </script>

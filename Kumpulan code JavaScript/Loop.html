@@ -1,0 +1,147 @@
+<!-- Pengertian Pengulangan
+Dalam bahasa pemrograman, pengulangan dapat digunakan untuk "mengulang" kode yang kita inginkan, dengan data yang berbeda.
+
+Pengulangan pada Javascript bisa menggunakan beberapa cara antara lain.
+
+For Loop
+While
+Do While
+For Loop
+For loop digunakan untuk pengulangan melalui blok kode beberapa kali.
+
+Sintaks
+
+for(pernyataan1; pernyataan 2; pernyataan 3)
+{
+    //blog kode yang akan dijalankan
+}
+Penyataan 1 dijalankan (satu kali) sebelum eksekusi blok kode.
+
+Pernyataan 2 mendefinisikan kondisi untuk mengeksekusi blok kode.
+
+Pernyataan 3 dijalankan (setiap saat) setelah blok kode dijalankan.
+
+Contoh -->
+<script>
+for(i=0;i<5;i++)
+{
+        teks += "Ini adalah nomor" + 1 + "<br>";
+}</script>
+<!-- Pada contoh di atas, i dimulai dari 0, kemudian pada pernyataan 2 cek kondisi apakah i kurang dari 5, apabila bernilai true, maka blok kode dijalankan.
+
+Pada pernyataan 3, i selalu ditambahkan 1 setiap kali usai menjalankan blok kode.
+
+Berikut ini contoh pengulangan dengan output ditampilkan pada console. -->
+
+<!DOCTYPE html>
+<html>
+<body>
+<div id="data"></div>
+<script>
+    for (var i = 0; i < 5; i++) 
+    {
+     console.log("Nilai saat ini " + i);
+    }
+</script>
+</body>
+</html>
+<!-- Simpan kode di atas misal dengan nama for_js.html, lalu kita bisa buka console pada browser (biasanya terletak pada menu Developer tools di browser). Panggil url sesuai lokasi penyimpanan dan nama filenya.
+
+
+
+Namun apabila kita ingin menampilkan output pengulangan melalui browser, kita bisa mengetikkan kode seperti di bawah ini. -->
+
+<!DOCTYPE html>
+<html>
+<body>
+<div id="data"></div>
+<script>
+var text="";
+for (var i = 0; i < 5; i++) 
+{
+text +="Nilai saat ini " + i + "<br>";
+document.getElementById("data").innerHTML = text;
+}
+</script>
+</body>
+</html>
+<!-- Output dari kode di atas akan tampil pada halaman browser seperti di bawah ini.
+
+
+
+While Loop
+While digunakan untuk pengulangan melalui blok kode selama kondisi tertentu benar.
+
+Sintaks
+
+while(kondisi)
+{
+    //blok kode yang akan dijalankan
+} -->
+<!-- Contoh -->
+<script>
+while(i<10)
+{
+    teks +="Ini adalah nomor " + i;
+    i++;
+}</script>
+<!-- Saat kondisi bernilai true atau benar, maka pengulangan akan dijalankan.
+
+Berikut contoh penggunaan while dengan output ditampilkan pada console. -->
+
+<!DOCTYPE html>
+<html>
+<body>
+<div id="data"></div>
+<script>
+var j=0;
+while(j<5)
+{
+    console.log("While: Nilai saat ini "+j);
+    j++;
+}
+</script>
+</body>
+</html>
+<!-- Berikut output dari penggunaan while di atas.
+
+
+
+Do While Loop
+Do while loop adalah varian dari while loop. Looping ini akan mengeksekusi kode satu kali, sebelum memeriksa apakah kondisinya benar, jika kondisinya benar maka akan mengulang loop.
+
+Sintaks
+
+do
+{
+    //kode yang akan dijalankan
+}
+while(kondisi);
+Contoh -->
+<script>
+do
+{
+    teks +="Ini adalah nomor " + i;
+    i++;
+}
+while(i<10);</script>
+<!-- Do While menjalankan pengulangan, saat kondisi bernilai true atau benar.
+
+Berikut contoh penggunaan do while dengan output ditampilkan pada console. -->
+
+<!DOCTYPE html>
+<html>
+<body>
+<div id="data"></div>
+<script>
+var k=0;
+do 
+{
+    console.log("Do While: Nilai saat ini "+k);
+    k++;
+}
+while(k<5)
+</script>
+</body>
+</html>
+
